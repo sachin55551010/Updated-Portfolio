@@ -1,6 +1,6 @@
 "use client";
 import { useMemo } from "react";
-export default function Stars({ count = 180, className = "" }) {
+export default function Stars({ count = 70, className = "" }) {
   const stars = useMemo(() => {
     return Array.from({ length: count }, (_, i) => ({
       id: i,
@@ -11,7 +11,7 @@ export default function Stars({ count = 180, className = "" }) {
 
       // Tiny star sizes
       // eslint-disable-next-line react-hooks/purity
-      size: [1, 1.5, 2, 2.5, 3][Math.floor(Math.random() * 5)],
+      size: [1, 1.2, 1.5, 1.8, 2][Math.floor(Math.random() * 5)],
 
       // eslint-disable-next-line react-hooks/purity
       opacity: 0.4 + Math.random() * 0.6,
