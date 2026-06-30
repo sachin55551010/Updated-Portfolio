@@ -28,7 +28,7 @@ body {
 ::view-transition-new(root) {
   clip-path: circle(0 at var(--x) var(--y));
   animation: reveal 1200ms ease forwards;
-  animation-delay: 100ms;
+  animation-delay: 50ms;
 }
 
 @keyframes reveal {
