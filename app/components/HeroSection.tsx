@@ -24,8 +24,6 @@ export const HeroSection = () => {
     setActiveNav(val);
   };
 
-  console.log(activeNav);
-
   const about =
     "I build products, not just features. From planning and development to deployment, I enjoy taking ownership of the entire development process. I focus on creating fast, scalable, and user-friendly web applications using modern technologies like React, Next.js, Node.js, Express, MongoDB, and PostgreSQL. I'm always learning, improving, and choosing the right tools to solve real business problems—not just following trends.";
   return (
