@@ -5,7 +5,7 @@ import { useTheme } from "next-themes";
 import { useEffect, useRef, useState } from "react";
 
 export default function ThemeToggle() {
-  const { theme, setTheme } = useTheme();
+  const { resolvedTheme, setTheme } = useTheme();
 
   const buttonRef = useRef<HTMLButtonElement>(null);
   const [mounted, setMounted] = useState(false);
@@ -34,7 +34,7 @@ export default function ThemeToggle() {
     document.documentElement.style.setProperty("--x", `${x}px`);
     document.documentElement.style.setProperty("--y", `${y}px`);
 
-    const nextTheme = theme === "dark" ? "light" : "dark";
+    const nextTheme = resolvedTheme === "dark" ? "light" : "dark";
 
     // Fallback for browsers that don't support View Transitions
     if (!document.startViewTransition) {
@@ -61,7 +61,7 @@ export default function ThemeToggle() {
       aria-label="Toggle theme"
       className="cursor-pointer"
     >
-      {theme === "dark" ? <Sun size={20} /> : <Moon size={20} />}
+      {resolvedTheme === "dark" ? <Sun size={20} /> : <Moon size={20} />}
     </button>
   );
 }

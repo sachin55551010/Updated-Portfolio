@@ -30,7 +30,7 @@ export const HeroSection = () => {
     "I build products, not just features. From planning and development to deployment, I enjoy taking ownership of the entire development process. I focus on creating fast, scalable, and user-friendly web applications using modern technologies like React, Next.js, Node.js, Express, MongoDB, and PostgreSQL. I'm always learning, improving, and choosing the right tools to solve real business problems—not just following trends.";
   return (
     <div
-      className={`h-fit w-full lg:w-[60%] flex flex-col items-center p-4 gap-3 ${spaceGrotesk.className}`}
+      className={`h-fit w-full lg:w-[60%] flex flex-col items-center p-4 gap-3 ${spaceGrotesk.className} `}
     >
       {/* background */}
       <motion.div className="w-full h-60 lg:h-80 relative rounded-2xl overflow-hidden ">
