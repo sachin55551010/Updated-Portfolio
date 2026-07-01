@@ -3,10 +3,10 @@ import { FrontendSkills } from "../constants/frontend_skills";
 import { motion } from "motion/react";
 export const Frontend = () => {
   return (
-    <div className="border border-primary-text/15 rounded-2xl backdrop-blur-[.24rem] p-2 mt-4">
+    <div className="border border-primary-text/15 rounded-2xl backdrop-blur-[.15rem] p-2 mt-4">
       <div className="flex flex-col gap-4">
         <h2 className="font-bold mt-4">Frontend Skill</h2>
-        <div className="grid grid-cols-3 gap-2">
+        <div className="grid grid-cols-2 lg:grid-cols-3 gap-2">
           {FrontendSkills.map((elem, index) => {
             return (
               <motion.div

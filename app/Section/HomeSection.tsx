@@ -10,7 +10,7 @@ export const HomeSection = () => {
     <div className="">
       {/* github graph */}
 
-      <div className="flex flex-col rounded-2xl gap-4 border border-zinc-500/30 p-2">
+      <div className="flex flex-col rounded-2xl gap-4 border border-primary-text/15 p-2 backdrop-blur-[.15rem]">
         <div className="flex justify-between items-center px-2">
           <div className="flex items-center gap-1">
             <FaGithub />
