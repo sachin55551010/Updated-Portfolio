@@ -1,8 +1,12 @@
 import { audiowide } from "../constants/custom_font";
+import { Backend } from "./BackendSkills";
+import { DevOps } from "./DevOpsSkills";
+import { Frontend } from "./FrontendSkills";
 
 export const Skills = () => {
   return (
-    <div className="mt-6">
+    <div className="mt-6 p-4">
+      {/* title */}
       <div className="w-fit">
         <h4 className={`font-bold text-2xl ${audiowide.className}`}>Skills</h4>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1418 125">
@@ -12,6 +16,15 @@ export const Skills = () => {
           ></path>
         </svg>
       </div>
+
+      {/* skills section */}
+      <Frontend />
+
+      {/* backend */}
+      <Backend />
+
+      {/* devops */}
+      <DevOps />
     </div>
   );
 };
