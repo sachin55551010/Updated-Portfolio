@@ -5,7 +5,7 @@ import { Frontend } from "./FrontendSkills";
 
 export const Skills = () => {
   return (
-    <div className="mt-6 p-4">
+    <div className="mt-6">
       {/* title */}
       <div className="w-fit">
         <h4 className={`font-bold text-2xl ${audiowide.className}`}>Skills</h4>
