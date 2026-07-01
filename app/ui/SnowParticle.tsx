@@ -32,7 +32,7 @@ export const SnowParticle = () => {
             },
             opacity: {
               value: {
-                min: 0.2,
+                min: 0.1,
                 max: 0.8,
               },
             },

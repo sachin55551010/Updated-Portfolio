@@ -4,6 +4,7 @@ import GithubGraph from "../components/Contributions";
 import { TbExternalLink } from "react-icons/tb";
 import { FaGithub } from "react-icons/fa";
 import { Skills } from "../components/Skills";
+import { Project } from "../components/Project";
 
 export const HomeSection = () => {
   return (
@@ -31,6 +32,9 @@ export const HomeSection = () => {
 
       {/* skills */}
       <Skills />
+
+      {/* Projects */}
+      <Project />
     </div>
   );
 };

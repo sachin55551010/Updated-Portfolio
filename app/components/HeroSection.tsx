@@ -11,15 +11,18 @@ import { FaGithub } from "react-icons/fa";
 import { IoMdMail } from "react-icons/io";
 import { AiOutlineDownload } from "react-icons/ai";
 import { NavIcons } from "../constants/nav_icons";
-import { useState } from "react";
 
 import { HomeSection } from "../Section/HomeSection";
 import { ProjectsSection } from "../Section/ProjectsSection";
 import { ToolsSection } from "../Section/ToolsSection";
 import { TestimonialsSection } from "../Section/TestimonialsSection";
 import { ContactSection } from "../Section/ContactSection";
+import { useStateStore } from "../store/useStateStore";
 export const HeroSection = () => {
-  const [activeNav, setActiveNav] = useState("Home");
+  // const [activeNav, setActiveNav] = useState("Home");
+
+  const { activeNav, setActiveNav } = useStateStore();
+
   const handleNavBtn = (val: string) => {
     setActiveNav(val);
   };

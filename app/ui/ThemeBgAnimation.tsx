@@ -10,7 +10,7 @@ export default function ThemeBgAnimation() {
       <StarParticle />
       {/* lighting effect */}
       <motion.div
-        className="inset-0 absolute bg-white"
+        className="inset-0 absolute overflow-hidden pointer-events-none bg-white"
         initial={{ opacity: 0 }}
         animate={{
           opacity: [0, 0.25, 0, 0.15, 0],
