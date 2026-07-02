@@ -22,7 +22,7 @@ export const SnowParticle = () => {
           detectRetina: true,
           particles: {
             number: {
-              value: 50,
+              value: 40,
             },
             color: {
               value: "#fff",

@@ -1,6 +1,7 @@
 import { FrontendSkills } from "../constants/frontend_skills";
 import { BackendSkills } from "../constants/backend_skills";
 import { ToolsDevops } from "../constants/tools_devops";
+import { motion } from "motion/react";
 import Image from "next/image";
 export const ToolsSection = () => {
   return (
@@ -8,9 +9,13 @@ export const ToolsSection = () => {
       {[...FrontendSkills, ...BackendSkills, ...ToolsDevops].map(
         (elem, index) => {
           return (
-            <div
+            <motion.div
               key={index}
               className="w-17 h-17 flex flex-col items-center justify-center"
+              initial={{ opacity: 0, scale: 0 }}
+              animate={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: index * 0.05 }}
             >
               <div className="relative h-10 w-10 rounded-lg bg-badge p-2">
                 <Image
@@ -20,7 +25,7 @@ export const ToolsSection = () => {
                 />
               </div>
               <h6 className="text-[.7rem] text-center">{elem.title}</h6>
-            </div>
+            </motion.div>
           );
         },
       )}
