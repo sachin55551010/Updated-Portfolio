@@ -6,7 +6,7 @@ export const ProjectsSection = () => {
     <div className="">
       {/* title */}
       <div className="w-fit">
-        <h4 className={`font-bold text-2xl ${audiowide.className}`}>
+        <h4 className={`font-bold text-xl ${audiowide.className}`}>
           All Projects
         </h4>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1418 125">

@@ -12,6 +12,7 @@ import { motion } from "motion/react";
 import { useStateStore } from "../store/useStateStore";
 export const ProjectList = () => {
   const { activeNav, setActiveNav } = useStateStore();
+
   return (
     <div className=" mt-4">
       {/* cricket tournament management application */}

@@ -5,11 +5,13 @@ import ts from "../../public/frontend/typescript.svg";
 import redux from "../../public/frontend/redux.svg";
 import rtk from "../../public/frontend/rtk.svg";
 import framer from "../../public/frontend/framer.png";
+import tailwind from "../../public/frontend/tailwind.svg";
 export const FrontendSkills = [
   { title: "React JS", icon: react },
   { title: "Next JS", icon: next },
   { title: "Java Script", icon: js },
   { title: "Type Script", icon: ts },
+  { title: "Tailwind CSS", icon: tailwind },
   { title: "Redux Toolkit", icon: redux },
   { title: "RTK Query", icon: rtk },
   { title: "Framer Motion", icon: framer },
