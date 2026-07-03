@@ -39,23 +39,29 @@ export const HeroSection = () => {
 
       <motion.div className="w-full h-60 lg:h-80 relative rounded-2xl overflow-hidden">
         {resolvedTheme === "dark" ? (
-          <motion.div className="">
+          <div>
             <Image
               src={heroBg}
               alt="bg_dark"
               fill
               className="object-cover rounded-2xl mask-[linear-gradient(to_bottom,black_50%,transparent)] hover:scale-110 transition-all duration-800 h-full w-full"
             />
-          </motion.div>
+          </div>
         ) : (
-          <motion.div>
+          <div className="">
             <Image
               src={bg_light}
               alt="bg_light"
               fill
               className="object-cover rounded-2xl mask-[linear-gradient(to_bottom,black_50%,transparent)] hover:scale-110 transition-all duration-800 h-full w-full"
             />
-          </motion.div>
+            {/* <motion.div
+              className="w-8 top-35 left-10 lg:top-50 lg:left-10 absolute h-8 bg-yellow-300 rounded-full shadow-[0_0_30px_#fde047,0_0_35px_#facc15,0_0_60px_#f59e0b,0_0_100px_rgba(245,158,11,1)]"
+              initial={{ x: 0, y: 0 }}
+              animate={{ x: 350, y: -100 }}
+              transition={{ duration: 1.5, delay: 1.5 }}
+            ></motion.div> */}
+          </div>
         )}
 
         {/* light theme image */}
@@ -63,7 +69,7 @@ export const HeroSection = () => {
         {/* dark theme image */}
 
         {/* profile picture */}
-        <div className="absolute border-2 shadow-[2px_2px_10px_rgba(0,0,0,1)] border-zinc-500 rounded-full top-25 left-4 h-30 w-30 lg:h-40 lg:w-40 lg:top-35">
+        <div className="absolute border-2 shadow-[2px_2px_10px_rgba(0,0,0,1)] border-zinc-500 rounded-full top-25 left-4 h-30 w-30 lg:h-40 lg:w-40 lg:top-35 z-100">
           <Image
             src={profile_pic}
             alt="profile"
