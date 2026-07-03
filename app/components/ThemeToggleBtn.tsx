@@ -3,6 +3,7 @@
 import { Moon, Sun } from "lucide-react";
 import { useTheme } from "next-themes";
 import { useEffect, useRef, useState } from "react";
+import { motion } from "motion/react";
 
 export default function ThemeToggle() {
   const { resolvedTheme, setTheme } = useTheme();
@@ -61,7 +62,21 @@ export default function ThemeToggle() {
       aria-label="Toggle theme"
       className="cursor-pointer"
     >
-      {resolvedTheme === "dark" ? <Sun size={20} /> : <Moon size={20} />}
+      {resolvedTheme === "dark" ? (
+        <motion.div
+          animate={{ scale: 1, opacity: 1, rotate: 720 }}
+          transition={{ duration: 6, repeat: Infinity, ease: "linear" }}
+        >
+          <Sun size={22} />
+        </motion.div>
+      ) : (
+        <motion.div
+          animate={{ scale: 1, opacity: 1, rotate: 720 }}
+          transition={{ duration: 6, repeat: Infinity, ease: "linear" }}
+        >
+          <Moon size={22} />
+        </motion.div>
+      )}
     </button>
   );
 }

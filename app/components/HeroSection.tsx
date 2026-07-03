@@ -11,18 +11,20 @@ import { FaGithub } from "react-icons/fa";
 import { IoMdMail } from "react-icons/io";
 import { AiOutlineDownload } from "react-icons/ai";
 import { NavIcons } from "../constants/nav_icons";
-
+import bg_light from "../../public/bg_light.avif";
 import { HomeSection } from "../Section/HomeSection";
 import { ProjectsSection } from "../Section/ProjectsSection";
+import { useTheme } from "next-themes";
 import { ToolsSection } from "../Section/ToolsSection";
 import { TestimonialsSection } from "../Section/TestimonialsSection";
 import { ContactSection } from "../Section/ContactSection";
 import { useStateStore } from "../store/useStateStore";
+import Link from "next/link";
 export const HeroSection = () => {
   // const [activeNav, setActiveNav] = useState("Home");
 
   const { activeNav, setActiveNav } = useStateStore();
-
+  const { resolvedTheme } = useTheme();
   const handleNavBtn = (val: string) => {
     setActiveNav(val);
   };
@@ -31,16 +33,34 @@ export const HeroSection = () => {
     "I build products, not just features. From planning and development to deployment, I enjoy taking ownership of the entire development process. I focus on creating fast, scalable, and user-friendly web applications using modern technologies like React, Next.js, Node.js, Express, MongoDB, and PostgreSQL. I'm always learning, improving, and choosing the right tools to solve real business problems—not just following trends.";
   return (
     <div
-      className={`h-fit w-full lg:w-[60%] flex flex-col items-center p-4 gap-3 ${spaceGrotesk.className} `}
+      className={`h-fit w-full lg:w-[60%] flex flex-col items-center p-4 gap-3 ${spaceGrotesk.className}`}
     >
       {/* background */}
-      <motion.div className="w-full h-60 lg:h-80 relative rounded-2xl overflow-hidden ">
-        <Image
-          src={heroBg}
-          alt="bg"
-          fill
-          className="object-cover rounded-2xl mask-[linear-gradient(to_bottom,black_50%,transparent)] hover:scale-110 transition-all duration-800"
-        />
+
+      <motion.div className="w-full h-60 lg:h-80 relative rounded-2xl overflow-hidden">
+        {resolvedTheme === "dark" ? (
+          <motion.div className="">
+            <Image
+              src={heroBg}
+              alt="bg_dark"
+              fill
+              className="object-cover rounded-2xl mask-[linear-gradient(to_bottom,black_50%,transparent)] hover:scale-110 transition-all duration-800 h-full w-full"
+            />
+          </motion.div>
+        ) : (
+          <motion.div>
+            <Image
+              src={bg_light}
+              alt="bg_light"
+              fill
+              className="object-cover rounded-2xl mask-[linear-gradient(to_bottom,black_50%,transparent)] hover:scale-110 transition-all duration-800 h-full w-full"
+            />
+          </motion.div>
+        )}
+
+        {/* light theme image */}
+
+        {/* dark theme image */}
 
         {/* profile picture */}
         <div className="absolute border-2 shadow-[2px_2px_10px_rgba(0,0,0,1)] border-zinc-500 rounded-full top-25 left-4 h-30 w-30 lg:h-40 lg:w-40 lg:top-35">
@@ -115,18 +135,30 @@ export const HeroSection = () => {
       <div className="w-full flex items-center justify-between mt-4">
         {/* icons */}
         <div className="flex gap-3">
-          <span className="text-zinc-400 hover:text-(--foreground) transition-all duration-300 cursor-pointer">
+          <Link
+            href="https://www.linkedin.com/in/sachin-bansal-69138b286/"
+            className="text-zinc-400 hover:text-(--foreground) transition-all duration-300 cursor-pointer"
+          >
             <FaLinkedin size={22} />
-          </span>
-          <span className="text-zinc-400 hover:text-(--foreground) transition-all duration-300 cursor-pointer">
+          </Link>
+          <Link
+            href="https://github.com/sachin55551010"
+            className="text-zinc-400 hover:text-(--foreground) transition-all duration-300 cursor-pointer"
+          >
             <FaGithub size={22} />
-          </span>
-          <span className="text-zinc-400 hover:text-(--foreground) transition-all duration-300 cursor-pointer">
+          </Link>
+          <Link
+            href="https://x.com/sachinkhatri007"
+            className="text-zinc-400 hover:text-(--foreground) transition-all duration-300 cursor-pointer"
+          >
             <FaXTwitter size={22} />
-          </span>
-          <span className="text-zinc-400 hover:text-(--foreground) transition-all duration-300 cursor-pointer">
+          </Link>
+          <a
+            href="maitto:sachin.dev1309@gmail.com"
+            className="text-zinc-400 hover:text-(--foreground) transition-all duration-300 cursor-pointer"
+          >
             <IoMdMail size={22} />
-          </span>
+          </a>
         </div>
 
         {/* side icon */}
