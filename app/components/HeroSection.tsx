@@ -56,8 +56,8 @@ export const HeroSection = () => {
               className="object-cover rounded-2xl mask-[linear-gradient(to_bottom,black_50%,transparent)] hover:scale-110 transition-all duration-800 h-full w-full"
             />
             <motion.div
-              className="w-8 h-8 absolute top-30 right-5 lg:top-40 lg:left-10 rounded-full
-bg-yellow-50
+              className="w-8 h-8 lg:w-10 lg:h-10 absolute top-30 right-5 lg:top-35 lg:left-10 rounded-full
+bg-yellow-50/60
 shadow-[0_0_20px_#ffffff,0_0_40px_#fff9c4,0_0_70px_#fff59d,0_0_110px_rgba(255,235,59,0.35)]"
               initial={{ x: 0, y: 0 }}
               animate={{
@@ -151,31 +151,89 @@ shadow-[0_0_20px_#ffffff,0_0_40px_#fff9c4,0_0_70px_#fff59d,0_0_110px_rgba(255,23
             href="https://www.linkedin.com/in/sachin-bansal-69138b286/"
             className="text-zinc-400 hover:text-(--foreground) transition-all duration-300 cursor-pointer"
           >
-            <FaLinkedin size={22} />
+            <motion.div className="relative overflow-hidden">
+              <FaLinkedin size={22} className="" />
+              <motion.div
+                className="h-10 w-2 bg-white absolute top-0 "
+                initial={{ rotate: 30, x: -30 }}
+                animate={{ x: 50 }}
+                transition={{
+                  duration: 0.8,
+                  repeat: Infinity,
+                  repeatDelay: 3,
+                }}
+              ></motion.div>
+            </motion.div>
           </Link>
           <Link
             href="https://github.com/sachin55551010"
             className="text-zinc-400 hover:text-(--foreground) transition-all duration-300 cursor-pointer"
           >
-            <FaGithub size={22} />
+            <motion.div className="relative overflow-hidden">
+              <FaGithub size={22} className="" />
+              <motion.div
+                className="h-10 w-2 bg-white absolute top-0 "
+                initial={{ rotate: 30, x: -30 }}
+                animate={{ x: 50 }}
+                transition={{
+                  duration: 0.8,
+                  repeat: Infinity,
+                  delay: 0.2,
+                  repeatDelay: 3,
+                }}
+              ></motion.div>
+            </motion.div>
           </Link>
           <Link
             href="https://x.com/sachinkhatri007"
             className="text-zinc-400 hover:text-(--foreground) transition-all duration-300 cursor-pointer"
           >
-            <FaXTwitter size={22} />
+            <motion.div className="relative overflow-hidden">
+              <FaXTwitter size={22} className="" />
+              <motion.div
+                className="h-10 w-2 bg-white absolute top-0 "
+                initial={{ rotate: 30, x: -30 }}
+                animate={{ x: 50 }}
+                transition={{
+                  duration: 0.8,
+                  repeat: Infinity,
+                  delay: 0.4,
+                  repeatDelay: 3,
+                }}
+              ></motion.div>
+            </motion.div>
           </Link>
           <a
-            href="maitto:sachin.dev1309@gmail.com"
+            href="mailto:sachin.dev1309@gmail.com"
             className="text-zinc-400 hover:text-(--foreground) transition-all duration-300 cursor-pointer"
           >
-            <IoMdMail size={22} />
+            <motion.div className="relative overflow-hidden">
+              <IoMdMail size={22} className="" />
+              <motion.div
+                className="h-10 w-2 bg-white absolute top-0 "
+                initial={{ rotate: 30, x: -30 }}
+                animate={{ x: 50 }}
+                transition={{
+                  duration: 0.8,
+                  repeat: Infinity,
+                  delay: 0.6,
+                  repeatDelay: 3,
+                }}
+              ></motion.div>
+            </motion.div>
           </a>
         </div>
 
         {/* side icon */}
         <div className="text-zinc-400 hover:text-(--foreground) transition-all duration-300 cursor-pointer">
-          <AiOutlineDownload size={22} />
+          <a
+            href="https://drive.google.com/uc?export=download&id=1akHdckN4mO5oxwO5dqL9ugqR66fMtUzd"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="relative overflow-hidden"
+          >
+            <AiOutlineDownload size={22} className="" />
+          </a>
         </div>
       </div>
 

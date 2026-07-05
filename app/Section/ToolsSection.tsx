@@ -27,7 +27,7 @@ export const ToolsSection = () => {
                 initial={{ opacity: 0, scale: 0 }}
                 animate={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.8, delay: index * 0.05 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
               >
                 <div className="relative h-10 w-10 rounded-lg bg-badge p-2">
                   <Image
