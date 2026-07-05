@@ -16,7 +16,9 @@ export const ProjectList = () => {
   return (
     <div className=" mt-4">
       {/* cricket tournament management application */}
-      <div className="backdrop-blur-[.15rem] border border-primary-text/15 p-3 rounded-2xl ">
+      <div
+        className={`backdrop-blur-[.15rem] border border-primary-text/15 p-3 rounded-2xl `}
+      >
         {/* image */}
         <div>
           <Image src={cricket} alt="img" className="object-cover rounded-xl" />
@@ -84,7 +86,9 @@ export const ProjectList = () => {
       </div>
 
       {/* Omkar agro solution */}
-      <div className="backdrop-blur-[.15rem] border border-primary-text/15 p-3 rounded-2xl mt-10">
+      <div
+        className={`backdrop-blur-[.15rem] border border-primary-text/15 p-3 rounded-2xl mt-10`}
+      >
         {/* image */}
         <div>
           <Image
@@ -149,7 +153,9 @@ export const ProjectList = () => {
       </div>
 
       {/* News Hills 24 */}
-      <div className="backdrop-blur-[.15rem] border border-primary-text/15 p-3 rounded-2xl mt-10">
+      <div
+        className={`backdrop-blur-[.15rem] border border-primary-text/15 p-3 rounded-2xl mt-10`}
+      >
         {/* image */}
         <div>
           <Image
@@ -217,7 +223,9 @@ export const ProjectList = () => {
       {activeNav === "Projects" && (
         <>
           {/* expense tracking app */}
-          <div className="backdrop-blur-[.15rem] border border-primary-text/15 p-3 rounded-2xl mt-10">
+          <div
+            className={`backdrop-blur-[.15rem] border border-primary-text/15 p-3 rounded-2xl mt-10`}
+          >
             {/* image */}
             <div>
               <Image
@@ -288,7 +296,9 @@ export const ProjectList = () => {
           </div>
 
           {/* Employee Management system */}
-          <div className="backdrop-blur-[.15rem] border border-primary-text/15 p-3 rounded-2xl mt-10">
+          <div
+            className={`backdrop-blur-[.15rem] border border-primary-text/15 p-3 rounded-2xl mt-10`}
+          >
             {/* image */}
             <div>
               <Image
@@ -358,7 +368,9 @@ export const ProjectList = () => {
           </div>
 
           {/* chat app */}
-          <div className="backdrop-blur-[.15rem] border border-primary-text/15 p-3 rounded-2xl mt-10">
+          <div
+            className={`backdrop-blur-[.15rem] border border-primary-text/15 p-3 rounded-2xl mt-10`}
+          >
             {/* image */}
             <div>
               <Image

@@ -65,14 +65,14 @@ export default function ThemeToggle() {
       {resolvedTheme === "dark" ? (
         <motion.div
           animate={{ scale: 1, opacity: 1, rotate: 720 }}
-          transition={{ duration: 6, repeat: Infinity, ease: "linear" }}
+          transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
         >
           <Sun size={22} />
         </motion.div>
       ) : (
         <motion.div
           animate={{ scale: 1, opacity: 1, rotate: 720 }}
-          transition={{ duration: 6, repeat: Infinity, ease: "linear" }}
+          transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
         >
           <Moon size={22} />
         </motion.div>

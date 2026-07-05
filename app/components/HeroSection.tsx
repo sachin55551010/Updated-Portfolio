@@ -55,12 +55,18 @@ export const HeroSection = () => {
               fill
               className="object-cover rounded-2xl mask-[linear-gradient(to_bottom,black_50%,transparent)] hover:scale-110 transition-all duration-800 h-full w-full"
             />
-            {/* <motion.div
-              className="w-8 top-35 left-10 lg:top-50 lg:left-10 absolute h-8 bg-yellow-300 rounded-full shadow-[0_0_30px_#fde047,0_0_35px_#facc15,0_0_60px_#f59e0b,0_0_100px_rgba(245,158,11,1)]"
+            <motion.div
+              className="w-8 h-8 absolute top-30 right-5 lg:top-40 lg:left-10 rounded-full
+bg-yellow-50
+shadow-[0_0_20px_#ffffff,0_0_40px_#fff9c4,0_0_70px_#fff59d,0_0_110px_rgba(255,235,59,0.35)]"
               initial={{ x: 0, y: 0 }}
-              animate={{ x: 350, y: -100 }}
-              transition={{ duration: 1.5, delay: 1.5 }}
-            ></motion.div> */}
+              animate={{
+                x: 0,
+                y: -100,
+                opacity: [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1],
+              }}
+              transition={{ duration: 0.4, delay: 0.5 }}
+            ></motion.div>
           </div>
         )}
 
