@@ -2,15 +2,13 @@
 import { motion } from "motion/react";
 import { StarParticle } from "./StarParticle";
 import { SnowParticle } from "./SnowParticle";
+// import { StarParticle } from "./StarParticle";
+// import { SnowParticle } from "./SnowParticle";
 export default function ThemeBgAnimation() {
   return (
     <div
       className={`fixed top-0 left-0 h-dvh w-screen overflow-hidden pointer-events-none`}
     >
-      {/* bg stars */}
-
-      <StarParticle />
-      {/* lighting effect */}
       <motion.div
         className="fixed top-0 left-0 h-dvh w-screen overflow-hidden pointer-events-none bg-white"
         initial={{ opacity: 0 }}
@@ -28,8 +26,8 @@ export default function ThemeBgAnimation() {
       {/* snow effect*/}
       <SnowParticle />
 
-      {/* ---------------- SKY GLOW ---------------- */}
-      {/* <div className="absolute inset-0 bg-linear-to-b from-slate-900/20 via-transparent to-slate-950/40"></div> */}
+      {/* stars */}
+      <StarParticle />
     </div>
   );
 }

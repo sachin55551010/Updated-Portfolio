@@ -1,10 +1,11 @@
 "use client";
-
+import { useTheme } from "next-themes";
 import { useEffect } from "react";
 import { tsParticles } from "@tsparticles/engine";
 import { loadSlim } from "@tsparticles/slim";
 
 export const SnowParticle = () => {
+  const { resolvedTheme } = useTheme();
   useEffect(() => {
     const init = async () => {
       await loadSlim(tsParticles);
@@ -58,7 +59,9 @@ export const SnowParticle = () => {
   return (
     <div
       id="snow"
-      className="fixed top-0 left-0 h-dvh w-screen -z-10 pointer-events-none"
+      className={`fixed top-0 left-0 h-dvh w-screen -z-10 pointer-events-none ${
+        resolvedTheme === "dark" ? "" : "hidden"
+      }`}
     />
   );
 };

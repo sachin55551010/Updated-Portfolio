@@ -1,12 +1,11 @@
 "use client";
 import { HeroSection } from "./components/HeroSection";
-import { useTheme } from "next-themes";
+
 import { useEffect, useState } from "react";
 import ThemeBgAnimation from "./ui/ThemeBgAnimation";
 import { Footer } from "./components/Footer";
 
 export default function Home() {
-  const { resolvedTheme } = useTheme();
   const [mount, setMount] = useState(false);
 
   useEffect(() => {
@@ -18,14 +17,7 @@ export default function Home() {
 
   return (
     <main className="h-dvh w-dvw flex flex-col items-center overflow-x-hidden">
-      <div
-        className={
-          resolvedTheme === "dark" ? "opacity-100" : "opacity-0 hidden"
-        }
-      >
-        <ThemeBgAnimation />
-      </div>
-
+      <ThemeBgAnimation />
       <HeroSection />
       <Footer />
     </main>
