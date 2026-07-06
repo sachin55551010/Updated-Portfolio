@@ -12,7 +12,7 @@ export default function ThemeBgAnimation() {
       <StarParticle />
       {/* lighting effect */}
       <motion.div
-        className="inset-0 absolute overflow-hidden pointer-events-none bg-white"
+        className="fixed top-0 left-0 h-dvh w-screen overflow-hidden pointer-events-none bg-white"
         initial={{ opacity: 0 }}
         animate={{
           opacity: [0, 0.25, 0, 0.15, 0],
@@ -20,7 +20,7 @@ export default function ThemeBgAnimation() {
         transition={{
           duration: 0.3,
           repeat: Infinity,
-          repeatDelay: 5,
+          repeatDelay: 6,
           ease: "easeOut",
         }}
       ></motion.div>

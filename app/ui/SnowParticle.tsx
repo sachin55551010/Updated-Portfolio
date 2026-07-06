@@ -56,6 +56,9 @@ export const SnowParticle = () => {
   }, []);
 
   return (
-    <div id="snow" className="absolute inset-0 -z-10 pointer-events-none" />
+    <div
+      id="snow"
+      className="fixed top-0 left-0 h-dvh w-screen -z-10 pointer-events-none"
+    />
   );
 };
