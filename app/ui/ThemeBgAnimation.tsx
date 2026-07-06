@@ -4,7 +4,9 @@ import { StarParticle } from "./StarParticle";
 import { SnowParticle } from "./SnowParticle";
 export default function ThemeBgAnimation() {
   return (
-    <div className={`absolute inset-0 overflow-hidden pointer-events-none`}>
+    <div
+      className={`fixed top-0 left-0 h-dvh w-screen overflow-hidden pointer-events-none`}
+    >
       {/* bg stars */}
 
       <StarParticle />
