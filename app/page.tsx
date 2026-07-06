@@ -18,7 +18,14 @@ export default function Home() {
 
   return (
     <main className="h-dvh w-dvw flex flex-col items-center overflow-x-hidden">
-      {resolvedTheme && <ThemeBgAnimation />}
+      <div
+        className={
+          resolvedTheme === "dark" ? "opacity-100" : "opacity-0 hidden"
+        }
+      >
+        <ThemeBgAnimation />
+      </div>
+
       <HeroSection />
       <Footer />
     </main>

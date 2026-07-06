@@ -1,8 +1,15 @@
 "use client";
+import { FaGithub } from "react-icons/fa";
+import { BiLogoGmail } from "react-icons/bi";
+import { RiTwitterXLine } from "react-icons/ri";
+import { FaLinkedinIn } from "react-icons/fa";
 import { useState } from "react";
 import { PiSpinnerBold } from "react-icons/pi";
 import emailjs from "@emailjs/browser";
 import { audiowide } from "../constants/custom_font";
+import { toast } from "sonner";
+import { motion } from "motion/react";
+import Link from "next/link";
 export const ContactSection = () => {
   const [isEmailSending, setIsEmailSending] = useState(false);
   const [messageData, setMessageData] = useState({
@@ -20,8 +27,10 @@ export const ContactSection = () => {
         messageData,
         process.env.NEXT_PUBLIC_KEY as string,
       );
+      toast.success("mail send Successfully");
     } catch (error) {
       console.log("send email error : ", error);
+      // toast.error(error.)
     } finally {
       setIsEmailSending(false);
       setMessageData({
@@ -102,6 +111,100 @@ export const ContactSection = () => {
             )}
           </button>
         </form>
+
+        {/* icons */}
+        <div className="p-2 mt-4">
+          <h6 className="border-b w-fit text-primary-text/70 py-2 font-bold border-primary-text/40">
+            Let&apos;s Connect{" "}
+          </h6>
+
+          <div className="flex gap-4 mt-4">
+            {/* linkedin */}
+            <Link href="https://www.linkedin.com/in/sachin-bansal-69138b286/">
+              <motion.div
+                className="relative p-2 rounded-full bg-primary-text/80 overflow-hidden"
+                initial="hidden"
+                whileHover="visible"
+              >
+                <motion.div
+                  className="h-15 w-15 bg-[#0A66C2] absolute top-[.35rem] left-[-7]"
+                  variants={{
+                    hidden: { y: 40 },
+                    visible: { y: -12 },
+                  }}
+                  transition={{ duration: 0.4, ease: "easeInOut" }}
+                ></motion.div>
+                <div className="relative z-50">
+                  <FaLinkedinIn size={20} className="text-icon-bg" />
+                </div>
+              </motion.div>
+            </Link>
+
+            {/* twitter */}
+            <Link href="https://x.com/sachinkhatri007">
+              <motion.div
+                className="relative p-2 rounded-full bg-primary-text/80 overflow-hidden"
+                initial="hidden"
+                whileHover="visible"
+              >
+                <motion.div
+                  className="h-15 w-15 bg-[#1DA1F2] absolute top-[.35rem] left-[-7]"
+                  variants={{
+                    hidden: { y: 40 },
+                    visible: { y: -12 },
+                  }}
+                  transition={{ duration: 0.4, ease: "easeInOut" }}
+                ></motion.div>
+                <div className="relative z-50">
+                  <RiTwitterXLine size={20} className="text-icon-bg" />
+                </div>
+              </motion.div>
+            </Link>
+
+            {/* github */}
+            <Link href="https://github.com/sachin55551010">
+              <motion.div
+                className="relative p-2 rounded-full bg-primary-text/80 overflow-hidden"
+                initial="hidden"
+                whileHover="visible"
+              >
+                <motion.div
+                  className="h-15 w-15 bg-[#0F766E] absolute top-[.35rem] left-[-7]"
+                  variants={{
+                    hidden: { y: 40 },
+                    visible: { y: -12 },
+                  }}
+                  transition={{ duration: 0.4, ease: "easeInOut" }}
+                ></motion.div>
+                <div className="relative z-50">
+                  <FaGithub size={20} className="text-icon-bg" />
+                </div>
+              </motion.div>
+            </Link>
+
+            {/* email */}
+
+            <a href="mailto:sachin.dev1309@gmail.com">
+              <motion.div
+                className="relative p-2 rounded-full bg-primary-text/80 overflow-hidden"
+                initial="hidden"
+                whileHover="visible"
+              >
+                <motion.div
+                  className="h-15 w-15 bg-[#EA4335] absolute top-[.35rem] left-[-7]"
+                  variants={{
+                    hidden: { y: 40 },
+                    visible: { y: -12 },
+                  }}
+                  transition={{ duration: 0.4, ease: "easeInOut" }}
+                ></motion.div>
+                <div className="relative z-50">
+                  <BiLogoGmail size={20} className="text-icon-bg" />
+                </div>
+              </motion.div>
+            </a>
+          </div>
+        </div>
       </div>
     </>
   );

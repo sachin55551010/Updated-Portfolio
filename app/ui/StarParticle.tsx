@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect } from "react";
-import { Fill, tsParticles } from "@tsparticles/engine";
+import { tsParticles } from "@tsparticles/engine";
 import { loadSlim } from "@tsparticles/slim";
 
 export const StarParticle = () => {

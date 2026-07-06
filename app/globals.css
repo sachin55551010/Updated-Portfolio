@@ -4,18 +4,21 @@
   --color-decoration: var(--decoration);
   --color-primary-text: var(--text-color);
   --color-badge: var(--badge);
+  --color-icon-bg: var(--icon-background);
 }
 :root {
   --bg-background: rgb(255, 255, 255);
   --text-color: rgb(41, 41, 41);
   --decoration: rgb(255, 115, 0);
   --badge: rgba(0, 0, 0, 0.144);
+  --icon-background: rgb(255, 255, 255);
 }
 .dark {
   --bg-background: rgb(11, 12, 15);
   --text-color: rgb(206, 206, 206);
   --decoration: rgb(96, 223, 115);
   --badge: rgba(255, 255, 255, 0.235);
+  --icon-background: rgb(11, 12, 15);
 }
 
 body {
