@@ -20,6 +20,8 @@ import { TestimonialsSection } from "../Section/TestimonialsSection";
 import { ContactSection } from "../Section/ContactSection";
 import { useStateStore } from "../store/useStateStore";
 import Link from "next/link";
+import { SnowParticle } from "../ui/SnowParticle";
+import { useEffect, useState } from "react";
 export const HeroSection = () => {
   // const [activeNav, setActiveNav] = useState("Home");
 
@@ -29,14 +31,24 @@ export const HeroSection = () => {
     setActiveNav(val);
   };
 
+  const [mount, setMount] = useState(false);
+
+  useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
+    setMount(true);
+  }, []);
+
+  if (!mount) return null;
   const about =
     "I build products, not just features. From planning and development to deployment, I enjoy taking ownership of the entire development process. I focus on creating fast, scalable, and user-friendly web applications using modern technologies like React, Next.js, Node.js, Express, MongoDB, and PostgreSQL. I'm always learning, improving, and choosing the right tools to solve real business problems—not just following trends.";
+
   return (
     <div
       className={`h-fit w-full lg:w-[60%] flex flex-col items-center p-4 gap-3 ${spaceGrotesk.className}`}
     >
       {/* background */}
 
+      {/* dark bg image */}
       <motion.div className="w-full h-60 lg:h-80 relative rounded-2xl overflow-hidden">
         {resolvedTheme === "dark" ? (
           <div>
@@ -46,8 +58,27 @@ export const HeroSection = () => {
               fill
               className="object-cover rounded-2xl mask-[linear-gradient(to_bottom,black_50%,transparent)] hover:scale-110 transition-all duration-800 h-full w-full"
             />
+            <div className="absolute inset-0 pointer-events-none">
+              <motion.div
+                className="overflow-hidden w-full h-full pointer-events-none bg-white"
+                initial={{ opacity: 0 }}
+                animate={{
+                  opacity: [0, 0.25, 0, 0.15, 0],
+                }}
+                transition={{
+                  duration: 0.3,
+                  repeat: Infinity,
+                  repeatDelay: 6,
+                  ease: "easeOut",
+                }}
+              ></motion.div>
+
+              {/* snow particles */}
+              <SnowParticle />
+            </div>
           </div>
         ) : (
+          // light bg image
           <div className="">
             <Image
               src={bg_light}
@@ -56,7 +87,7 @@ export const HeroSection = () => {
               className="object-cover rounded-2xl mask-[linear-gradient(to_bottom,black_50%,transparent)] hover:scale-110 transition-all duration-800 h-full w-full"
             />
             <motion.div
-              className="w-8 h-8 lg:w-10 lg:h-10 absolute top-30 right-5 lg:top-35 lg:left-10 rounded-full
+              className="w-7 h-7 lg:w-10 lg:h-10 absolute top-30 right-5 lg:top-35 lg:left-10 rounded-full
 bg-yellow-50/60
 shadow-[0_0_20px_#ffffff,0_0_40px_#fff9c4,0_0_70px_#fff59d,0_0_110px_rgba(255,235,59,0.35)]"
               initial={{ x: 0, y: 0 }}
@@ -69,10 +100,6 @@ shadow-[0_0_20px_#ffffff,0_0_40px_#fff9c4,0_0_70px_#fff59d,0_0_110px_rgba(255,23
             ></motion.div>
           </div>
         )}
-
-        {/* light theme image */}
-
-        {/* dark theme image */}
 
         {/* profile picture */}
         <div className="absolute border-2 shadow-[2px_2px_10px_rgba(0,0,0,1)] border-zinc-500 rounded-full top-25 left-4 h-30 w-30 lg:h-40 lg:w-40 lg:top-35 z-100">
@@ -147,14 +174,15 @@ shadow-[0_0_20px_#ffffff,0_0_40px_#fff9c4,0_0_70px_#fff59d,0_0_110px_rgba(255,23
       <div className="w-full flex items-center justify-between mt-4">
         {/* icons */}
         <div className="flex gap-3">
+          {/* linkedin */}
           <Link
             href="https://www.linkedin.com/in/sachin-bansal-69138b286/"
             className="text-zinc-400 hover:text-(--foreground) transition-all duration-300 cursor-pointer"
           >
             <motion.div className="relative overflow-hidden">
-              <FaLinkedin size={22} className="" />
+              <FaLinkedin size={26} className="" />
               <motion.div
-                className="h-10 w-2 bg-white absolute top-0 "
+                className="h-18 w-2 bg-white absolute top-[-8]"
                 initial={{ rotate: 30, x: -30 }}
                 animate={{ x: 50 }}
                 transition={{
@@ -165,14 +193,16 @@ shadow-[0_0_20px_#ffffff,0_0_40px_#fff9c4,0_0_70px_#fff59d,0_0_110px_rgba(255,23
               ></motion.div>
             </motion.div>
           </Link>
+
+          {/* github */}
           <Link
             href="https://github.com/sachin55551010"
             className="text-zinc-400 hover:text-(--foreground) transition-all duration-300 cursor-pointer"
           >
             <motion.div className="relative overflow-hidden">
-              <FaGithub size={22} className="" />
+              <FaGithub size={26} className="" />
               <motion.div
-                className="h-10 w-2 bg-white absolute top-0 "
+                className="h-18 w-2 bg-white absolute top-[-8]"
                 initial={{ rotate: 30, x: -30 }}
                 animate={{ x: 50 }}
                 transition={{
@@ -184,14 +214,16 @@ shadow-[0_0_20px_#ffffff,0_0_40px_#fff9c4,0_0_70px_#fff59d,0_0_110px_rgba(255,23
               ></motion.div>
             </motion.div>
           </Link>
+
+          {/* x */}
           <Link
             href="https://x.com/sachinkhatri007"
             className="text-zinc-400 hover:text-(--foreground) transition-all duration-300 cursor-pointer"
           >
             <motion.div className="relative overflow-hidden">
-              <FaXTwitter size={22} className="" />
+              <FaXTwitter size={26} className="" />
               <motion.div
-                className="h-10 w-2 bg-white absolute top-0 "
+                className="h-18 w-2 bg-white absolute top-[-8] "
                 initial={{ rotate: 30, x: -30 }}
                 animate={{ x: 50 }}
                 transition={{
@@ -203,14 +235,16 @@ shadow-[0_0_20px_#ffffff,0_0_40px_#fff9c4,0_0_70px_#fff59d,0_0_110px_rgba(255,23
               ></motion.div>
             </motion.div>
           </Link>
+
+          {/* mail */}
           <a
             href="mailto:sachin.dev1309@gmail.com"
             className="text-zinc-400 hover:text-(--foreground) transition-all duration-300 cursor-pointer"
           >
             <motion.div className="relative overflow-hidden">
-              <IoMdMail size={22} className="" />
+              <IoMdMail size={26} className="" />
               <motion.div
-                className="h-10 w-2 bg-white absolute top-0 "
+                className="h-18 w-2 bg-white absolute top-[-8] "
                 initial={{ rotate: 30, x: -30 }}
                 animate={{ x: 50 }}
                 transition={{
@@ -232,7 +266,7 @@ shadow-[0_0_20px_#ffffff,0_0_40px_#fff9c4,0_0_70px_#fff59d,0_0_110px_rgba(255,23
             rel="noopener noreferrer"
             className="relative overflow-hidden"
           >
-            <AiOutlineDownload size={22} className="" />
+            <AiOutlineDownload size={26} className="" />
           </a>
         </div>
       </div>

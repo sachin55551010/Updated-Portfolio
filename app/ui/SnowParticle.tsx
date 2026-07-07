@@ -2,13 +2,12 @@
 import { useTheme } from "next-themes";
 import { useEffect } from "react";
 import { tsParticles } from "@tsparticles/engine";
-import { loadSlim } from "@tsparticles/slim";
-
+import { initParticles } from "../lib/initParticle";
 export const SnowParticle = () => {
   const { resolvedTheme } = useTheme();
   useEffect(() => {
     const init = async () => {
-      await loadSlim(tsParticles);
+      await initParticles();
 
       await tsParticles.load({
         id: "snow",
@@ -39,8 +38,8 @@ export const SnowParticle = () => {
             },
             size: {
               value: {
-                min: 2,
-                max: 5,
+                min: 1,
+                max: 3,
               },
             },
             move: {
@@ -59,7 +58,7 @@ export const SnowParticle = () => {
   return (
     <div
       id="snow"
-      className={`fixed top-0 left-0 h-dvh w-screen -z-10 pointer-events-none ${
+      className={`absolute inset-0 pointer-events-none ${
         resolvedTheme === "dark" ? "" : "hidden"
       }`}
     />
