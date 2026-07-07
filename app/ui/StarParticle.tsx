@@ -2,11 +2,10 @@
 
 import { useEffect, useRef } from "react";
 import { motion } from "motion/react";
-import { useTheme } from "next-themes";
 
 export const StarParticle = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
-  const { resolvedTheme } = useTheme();
+
   useEffect(() => {
     const canvas = canvasRef.current!;
     const ctx = canvas.getContext("2d")!;
@@ -67,9 +66,7 @@ export const StarParticle = () => {
   return (
     <motion.canvas
       ref={canvasRef}
-      className={`fixed inset-0 pointer-events-none ${
-        resolvedTheme === "dark" ? "" : "hidden"
-      }`}
+      className={`fixed inset-0 pointer-events-none `}
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.4 }}
