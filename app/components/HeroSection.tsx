@@ -182,7 +182,7 @@ shadow-[0_0_20px_#ffffff,0_0_40px_#fff9c4,0_0_70px_#fff59d,0_0_110px_rgba(255,23
             <motion.div className="relative overflow-hidden">
               <FaLinkedin size={26} className="" />
               <motion.div
-                className="h-18 w-2 bg-white absolute top-[-8]"
+                className="h-18 w-2 bg-white/70 absolute top-[-8]"
                 initial={{ rotate: 30, x: -30 }}
                 animate={{ x: 50 }}
                 transition={{
@@ -202,13 +202,13 @@ shadow-[0_0_20px_#ffffff,0_0_40px_#fff9c4,0_0_70px_#fff59d,0_0_110px_rgba(255,23
             <motion.div className="relative overflow-hidden">
               <FaGithub size={26} className="" />
               <motion.div
-                className="h-18 w-2 bg-white absolute top-[-8]"
+                className="h-18 w-2 bg-white/70 absolute top-[-8]"
                 initial={{ rotate: 30, x: -30 }}
                 animate={{ x: 50 }}
                 transition={{
                   duration: 0.8,
                   repeat: Infinity,
-                  delay: 0.2,
+                  delay: 0.3,
                   repeatDelay: 3,
                 }}
               ></motion.div>
@@ -223,13 +223,13 @@ shadow-[0_0_20px_#ffffff,0_0_40px_#fff9c4,0_0_70px_#fff59d,0_0_110px_rgba(255,23
             <motion.div className="relative overflow-hidden">
               <FaXTwitter size={26} className="" />
               <motion.div
-                className="h-18 w-2 bg-white absolute top-[-8] "
+                className="h-18 w-2 bg-white/70 absolute top-[-8] "
                 initial={{ rotate: 30, x: -30 }}
                 animate={{ x: 50 }}
                 transition={{
                   duration: 0.8,
                   repeat: Infinity,
-                  delay: 0.4,
+                  delay: 0.6,
                   repeatDelay: 3,
                 }}
               ></motion.div>
@@ -244,13 +244,13 @@ shadow-[0_0_20px_#ffffff,0_0_40px_#fff9c4,0_0_70px_#fff59d,0_0_110px_rgba(255,23
             <motion.div className="relative overflow-hidden">
               <IoMdMail size={26} className="" />
               <motion.div
-                className="h-18 w-2 bg-white absolute top-[-8] "
+                className="h-18 w-2 bg-white/70 absolute top-[-8] "
                 initial={{ rotate: 30, x: -30 }}
                 animate={{ x: 50 }}
                 transition={{
                   duration: 0.8,
                   repeat: Infinity,
-                  delay: 0.6,
+                  delay: 0.9,
                   repeatDelay: 3,
                 }}
               ></motion.div>
