@@ -22,11 +22,11 @@ export const StarParticle = () => {
       ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
       ctx.clearRect(0, 0, window.innerWidth, window.innerHeight);
 
-      for (let i = 0; i < 50; i++) {
+      for (let i = 0; i < 35; i++) {
         const x = Math.random() * window.innerWidth;
         const y = Math.random() * window.innerHeight;
 
-        const size = Math.random() * 3 + 1;
+        const size = Math.random() * 2 + 1;
         const opacity = Math.random() * 0.7 + 0.2;
 
         const blur = Math.random() > 0.85 ? 1 : 0;

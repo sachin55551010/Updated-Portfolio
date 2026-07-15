@@ -4,9 +4,9 @@ import { motion } from "motion/react";
 import { ToolsDevops } from "../constants/tools_devops";
 export const DevOps = () => {
   return (
-    <div className="border border-primary-text/15 rounded-2xl backdrop-blur-[.15rem] p-2 mt-10">
+    <div className="border border-primary-text/15 rounded-2xl backdrop-blur-[.15rem] p-4 mt-10">
       <div className="flex flex-col gap-4">
-        <h2 className="font-bold mt-4">Tools & Devops</h2>
+        <h2 className="font-bold">Tools & DevOps</h2>
         <div className="grid grid-cols-2 lg:grid-cols-3 gap-2">
           {ToolsDevops.map((elem, index) => {
             return (

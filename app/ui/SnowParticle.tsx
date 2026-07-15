@@ -38,8 +38,8 @@ export const SnowParticle = () => {
             },
             size: {
               value: {
-                min: 1,
-                max: 3,
+                min: 0.7,
+                max: 2,
               },
             },
             move: {

@@ -113,7 +113,7 @@ shadow-[0_0_20px_#ffffff,0_0_40px_#fff9c4,0_0_70px_#fff59d,0_0_110px_rgba(255,23
       </motion.div>
 
       {/* other information */}
-      <div className="flex justify-between w-full px-2">
+      <div className="flex justify-between w-full">
         {/* name and theme toggle */}
         <div className="text-2xl lg:text-3xl font-semibold">
           {"Sachin Bansal".split("").map((elem, index) => {
@@ -272,7 +272,7 @@ shadow-[0_0_20px_#ffffff,0_0_40px_#fff9c4,0_0_70px_#fff59d,0_0_110px_rgba(255,23
       </div>
 
       {/* nav menu */}
-      <nav className="flex justify-around w-full mt-4">
+      <nav className="flex justify-between w-full mt-4">
         {NavIcons.map((elem) => {
           return (
             <span
