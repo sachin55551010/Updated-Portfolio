@@ -204,6 +204,9 @@ export const ContactSection = () => {
               </motion.div>
             </a>
           </div>
+          <p className="text-primary-text/60 mt-2 text-sm border-b w-fit py-2 border-primary-text/50">
+            sachin.dev1309@gmail.com
+          </p>
         </div>
       </div>
     </>
