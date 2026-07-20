@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-
+import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 import { ThemeProvider } from "./components/ThemeProvider";
 import { AppToaster } from "./components/AppToaster";
@@ -38,6 +38,7 @@ export default function RootLayout({
       <body className="min-h-full not-first:flex flex-col">
         <ThemeProvider>
           {children}
+          <Analytics />
           <AppToaster />
         </ThemeProvider>
       </body>
